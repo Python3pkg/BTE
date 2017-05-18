@@ -9,6 +9,6 @@ p.close()
 x = p.body_text()
 s = p.summary()
 t = p.full_text()
-print("\n\nSummary:\n",s)
-print("\nBodytext:\n",x)
-print("\nFulltext:\n",t)
+print "\n\nSummary:\n",s
+print "\nBodytext:\n",x
+print "\nFulltext:\n",t

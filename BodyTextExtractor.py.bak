@@ -7,7 +7,7 @@ Modified by Bill Bushey <wbushey@acm.org> and Brian Young <byoung061@gmail.com> 
 import htmllib
 import formatter
 import string 
-import sys,urllib.request,urllib.parse,urllib.error
+import sys,urllib
 import time
 
 class HtmlTokenParser(htmllib.HTMLParser):
@@ -197,7 +197,7 @@ if __name__ == '__main__':
 	p = HtmlBodyTextExtractor()
 	p.feed(html)
 	p.close()
-	r10 = list(range(10))
+	r10 = range(10)
 	t1 = time.clock()
 	for r in r10:
 		x = p.body_text()
@@ -213,8 +213,8 @@ if __name__ == '__main__':
 #	print "\nOld Bodytext:\n",z
 #	print "\nFull Text:\n",t
 	if (x == z):
-		print("The SAME!!!!!\n")
-	print("Time to initialize: %f\nTime for new method: %f\nTime for old method: %f\n" % (t1-t0, t2-t1, t3-t2))
+		print "The SAME!!!!!\n"
+	print "Time to initialize: %f\nTime for new method: %f\nTime for old method: %f\n" % (t1-t0, t2-t1, t3-t2)
 
 # (c) 2001 Aidan Finn
 # Released under the terms of the GNU GPL
